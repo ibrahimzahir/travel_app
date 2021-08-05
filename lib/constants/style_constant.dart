@@ -20,3 +20,38 @@ var discountStyle = GoogleFonts.nunito(
   fontSize: 12,
   color: tBlueColor,
 );
+
+var serviceTtlStyle = GoogleFonts.nunito(
+  fontWeight: FontWeight.w700,
+  color: tTitleColor,
+  fontSize: 16,
+);
+
+var popDestiTitleStyle = GoogleFonts.nunito(
+  fontWeight: FontWeight.w700,
+  color: tTitleColor,
+  fontSize: 16,
+);
+
+var popDestiSubTitleStyle = GoogleFonts.nunito(
+  fontWeight: FontWeight.w500,
+  color: tSubtitleColor,
+  fontSize: 16,
+);
+
+var travelLogTtlStyle = GoogleFonts.nunito(
+  fontWeight: FontWeight.w900,
+  color: tFillColor,
+  fontSize: 14,
+);
+var travelLogContentStyle = GoogleFonts.nunito(
+  fontWeight: FontWeight.w400,
+  color: tFillColor,
+  fontSize: 10,
+);
+
+var tavelLogPlaceStyle = GoogleFonts.nunito(
+  fontWeight: FontWeight.w400,
+  color: tBlueColor,
+  fontSize: 10,
+);
