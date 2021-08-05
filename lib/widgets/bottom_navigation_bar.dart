@@ -12,21 +12,20 @@ class _BottomNavigationBarTravelState extends State<BottomNavigationBarTravel> {
 
   static const List<Widget> _pages = <Widget>[
     Icon(
-      Icons.call,
-      size: 150,
+      Icons.home_rounded,
     ),
     Icon(
-      Icons.camera,
-      size: 150,
+      Icons.favorite_border_rounded,
     ),
     Icon(
-      Icons.chat,
-      size: 150,
+      Icons.add_circle_outline_rounded,
     ),
-    // Icon(
-    //   Icons.chat,
-    //   size: 150,
-    // ),
+    Icon(
+      Icons.notifications_none_rounded,
+    ),
+    Icon(
+      Icons.person_outline_rounded,
+    ),
   ];
 
   void _onItemTapped(int index) {
@@ -37,45 +36,48 @@ class _BottomNavigationBarTravelState extends State<BottomNavigationBarTravel> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 64,
-      decoration: BoxDecoration(
-        color: tFillColor,
-        boxShadow: [
-          BoxShadow(
+    return BottomNavigationBar(
+      type: BottomNavigationBarType.fixed,
+      items: const <BottomNavigationBarItem>[
+        BottomNavigationBarItem(
+          icon: Icon(
+            Icons.home_rounded,
             color: tBottomNaviBar,
-            spreadRadius: 2,
-            blurRadius: 15,
-            offset: Offset(0, 5),
           ),
-        ],
-        borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(20),
-          topRight: Radius.circular(20),
+          label: '',
         ),
-      ),
-      child: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.call),
-            label: 'Calls',
+        BottomNavigationBarItem(
+          icon: Icon(
+            Icons.favorite_border_rounded,
+            color: tBottomNaviBar,
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.camera),
-            label: 'Camera',
+          label: '',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(
+            Icons.add_circle_outline_rounded,
+            color: tBottomNaviBar,
+            size: 30,
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.chat),
-            label: 'Chats',
+          label: '',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(
+            Icons.notifications_none_rounded,
+            color: tBottomNaviBar,
           ),
-          // BottomNavigationBarItem(
-          //   icon: Icon(Icons.chat),
-          //   label: 'Chats',
-          // ),
-        ],
-        currentIndex: _selectedIndex,
-        onTap: _onItemTapped,
-      ),
+          label: '',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(
+            Icons.person_outline_rounded,
+            color: tBottomNaviBar,
+          ),
+          label: '',
+        ),
+      ],
+      currentIndex: _selectedIndex,
+      onTap: _onItemTapped,
     );
   }
 }

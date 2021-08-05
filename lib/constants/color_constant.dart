@@ -9,4 +9,4 @@ const tBorderColor = Color(0xFFE8E8F3);
 const tFillColor = Color(0xFFFFFFFF);
 const tCardTitleColor = Color(0xFF2E4ECF);
 const tCardSubtitleColor = tTitleColor;
-final tBottomNaviBar = Colors.grey.withOpacity(0.3);
+const tBottomNaviBar = Colors.grey;

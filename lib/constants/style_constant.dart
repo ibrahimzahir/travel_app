@@ -7,7 +7,12 @@ import 'color_constant.dart';
 var titleStyle = GoogleFonts.nunito(
   fontWeight: FontWeight.w600,
   color: tTitleColor,
-  fontSize: 16,
+  fontSize: 20,
+);
+var nameTtleStyle = GoogleFonts.nunito(
+  fontWeight: FontWeight.w700,
+  color: tTitleColor,
+  fontSize: 20,
 );
 
 var discountStyle = GoogleFonts.nunito(
