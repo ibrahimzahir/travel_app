@@ -5,25 +5,31 @@ import 'package:google_fonts/google_fonts.dart';
 import 'color_constant.dart';
 
 var titleStyle = GoogleFonts.nunito(
-  fontWeight: FontWeight.w600,
+  fontWeight: FontWeight.w700,
   color: tTitleColor,
   fontSize: 18,
 );
 var hiTtleStyle = GoogleFonts.nunito(
-  fontWeight: FontWeight.w500,
+  fontWeight: FontWeight.w700,
   color: tTitleColor,
   fontSize: 20,
 );
 var nameTtleStyle = GoogleFonts.nunito(
-  fontWeight: FontWeight.w600,
-  color: tTitleColor,
+  fontWeight: FontWeight.w700,
+  color: tbaseColor,
   fontSize: 20,
 );
 
 var discountStyle = GoogleFonts.nunito(
   fontWeight: FontWeight.w700,
   fontSize: 12,
-  color: tBlueColor,
+  color: tbaseColor,
+);
+
+var txtMoreStyle = GoogleFonts.nunito(
+  fontWeight: FontWeight.w700,
+  fontSize: 15,
+  color: tbaseColor,
 );
 
 var serviceTtlStyle = GoogleFonts.nunito(
@@ -57,6 +63,6 @@ var travelLogContentStyle = GoogleFonts.nunito(
 
 var tavelLogPlaceStyle = GoogleFonts.nunito(
   fontWeight: FontWeight.w400,
-  color: tBlueColor,
+  color: tbaseColor,
   fontSize: 10,
 );
