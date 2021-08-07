@@ -3,18 +3,13 @@ class PopularDestinationModel {
   String island;
   String image;
 
-  PopularDestinationModel(String name, String island, String image);
-
-  List<PopularDestinationModel> popDestinations = popDestinationsList
-      .map(
-        (item) => PopularDestinationModel(
-          item['name'],
-          item['island'],
-          item['image'],
-        ),
-      )
-      .toList();
+  PopularDestinationModel(this.name, this.island, this.image);
 }
+
+List<PopularDestinationModel> popDestinations = popDestinationsList
+    .map((item) =>
+        PopularDestinationModel(item['name'], item['island'], item['image']))
+    .toList();
 
 var popDestinationsList = [
   {
@@ -28,18 +23,18 @@ var popDestinationsList = [
     "image": "assets/images/beach-weds.jpeg"
   },
   {
-    "name": "Veligandu Beach Maldives",
+    "name": "Veligandu Maldives",
     "island": "AA.Rasdhoo",
     "image": "assets/images/beach.jpeg"
   },
   {
-    "name": "Palm Tree Beach Maldives",
+    "name": "Palm Beach Resort",
     "island": "Ga.Dhevvadhoo",
     "image": "assets/images/beach.jpg"
   },
   {
-    "name": "Sun set Beach",
-    "island": "B.Hithaadhoo",
+    "name": "Niyaam Beach",
+    "island": "N.Hithaadhoo",
     "image": "assets/images/sunset.jpeg"
   },
 ];

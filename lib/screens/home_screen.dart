@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
+import '../models/destinations_model.dart';
 import '../models/carousel_model.dart';
 import '../widgets/bottom_navigation_bar.dart';
 import '../constants/style_constant.dart';
@@ -319,6 +320,59 @@ class _HomeScreenState extends State<HomeScreen> {
                       style: hiTtleStyle,
                     ),
                   ],
+                ),
+              ),
+              Container(
+                height: 170,
+                child: ListView.builder(
+                  itemCount: popDestinations.length,
+                  padding: EdgeInsets.only(left: 16, right: 16),
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (contex, index) {
+                    return Padding(
+                      padding: const EdgeInsets.only(left: 8.0),
+                      child: Container(
+                        height: 170,
+                        width: 140,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(12),
+                          border: Border.all(color: tBorderColor),
+                        ),
+                        child: Column(
+                          children: [
+                            ClipRRect(
+                              borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(12.0),
+                                topRight: Radius.circular(12.0),
+                                bottomLeft: Radius.zero,
+                                bottomRight: Radius.zero,
+                              ),
+                              child: Image.asset(
+                                popDestinations[index].image,
+                                height: 100,
+                                width: 140,
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                            Column(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 8.0),
+                                  child:
+                                      Text(popDestinations[index].name ?? ''),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 8.0),
+                                  child:
+                                      Text(popDestinations[index].island ?? ''),
+                                ),
+                              ],
+                            )
+                          ],
+                        ),
+                      ),
+                    );
+                  },
                 ),
               ),
             ],
