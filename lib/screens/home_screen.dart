@@ -28,19 +28,20 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: tBackgroundColor,
-        elevation: 0,
-      ),
+      // appBar: AppBar(
+      //   backgroundColor: tBackgroundColor,
+      //   elevation: 0,
+      // ),
       bottomNavigationBar: BottomNavigationBarTravel(),
       body: SingleChildScrollView(
         child: Container(
+          padding: EdgeInsets.only(bottom: 20),
           child: ListView(
             shrinkWrap: true,
             physics: ClampingScrollPhysics(),
             children: [
               Padding(
-                padding: const EdgeInsets.only(left: 16.0, right: 16),
+                padding: const EdgeInsets.only(top: 50, left: 16.0, right: 16),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
@@ -323,53 +324,59 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               Container(
-                height: 170,
+                height: 190,
                 child: ListView.builder(
                   itemCount: popDestinations.length,
-                  padding: EdgeInsets.only(left: 16, right: 16),
+                  padding: EdgeInsets.only(left: 16, right: 16, top: 20),
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (contex, index) {
-                    return Padding(
-                      padding: const EdgeInsets.only(left: 8.0),
-                      child: Container(
-                        height: 170,
-                        width: 140,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(12),
-                          border: Border.all(color: tBorderColor),
-                        ),
-                        child: Column(
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(12.0),
-                                topRight: Radius.circular(12.0),
-                                bottomLeft: Radius.zero,
-                                bottomRight: Radius.zero,
-                              ),
-                              child: Image.asset(
-                                popDestinations[index].image,
-                                height: 100,
-                                width: 140,
-                                fit: BoxFit.cover,
-                              ),
+                    return Container(
+                      margin: EdgeInsets.only(right: 10),
+                      height: 190,
+                      width: 170,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12),
+                        border: Border.all(color: tBorderColor),
+                      ),
+                      child: Column(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(12.0),
+                              topRight: Radius.circular(12.0),
+                              bottomLeft: Radius.zero,
+                              bottomRight: Radius.zero,
                             ),
-                            Column(
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.only(top: 8.0),
-                                  child:
-                                      Text(popDestinations[index].name ?? ''),
+                            child: Image.asset(
+                              popDestinations[index].image,
+                              height: 100,
+                              width: 170,
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Container(
+                                padding: EdgeInsets.only(
+                                  top: 10,
+                                  left: 8,
+                                  right: 4,
                                 ),
-                                Padding(
-                                  padding: const EdgeInsets.only(top: 8.0),
-                                  child:
-                                      Text(popDestinations[index].island ?? ''),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(popDestinations[index].name ?? '',
+                                        style: txtMoreStyle),
+                                    SizedBox(height: 8),
+                                    Text(popDestinations[index].island ?? ''),
+                                  ],
                                 ),
-                              ],
-                            )
-                          ],
-                        ),
+                              ),
+                            ],
+                          )
+                        ],
                       ),
                     );
                   },

@@ -42,7 +42,7 @@ class _BottomNavigationBarTravelState extends State<BottomNavigationBarTravel> {
         BottomNavigationBarItem(
           icon: Icon(
             Icons.home_rounded,
-            color: tBottomNaviBar,
+            color: tbaseColor,
           ),
           label: '',
         ),

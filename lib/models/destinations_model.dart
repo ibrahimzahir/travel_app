@@ -14,27 +14,27 @@ List<PopularDestinationModel> popDestinations = popDestinationsList
 var popDestinationsList = [
   {
     "name": "Coral Beach Maldives",
-    "island": "Adh.Hagnameedhoo",
+    "island": "Adh. Hagnameedhoo",
     "image": "assets/images/beach-view.jpeg"
   },
   {
     "name": "Anantara",
-    "island": "Adh.Anatara",
+    "island": "Adh. Anatara",
     "image": "assets/images/beach-weds.jpeg"
   },
   {
     "name": "Veligandu Maldives",
-    "island": "AA.Rasdhoo",
+    "island": "AA. Rasdhoo",
     "image": "assets/images/beach.jpeg"
   },
   {
     "name": "Palm Beach Resort",
-    "island": "Ga.Dhevvadhoo",
+    "island": "Ga. Dhevvadhoo",
     "image": "assets/images/beach.jpg"
   },
   {
     "name": "Niyaam Beach",
-    "island": "N.Hithaadhoo",
+    "island": "N. Hithaadhoo",
     "image": "assets/images/sunset.jpeg"
   },
 ];
